@@ -1,9 +1,16 @@
 import { Link } from "react-router-dom";
+import { Helmet } from "react-helmet-async";
 
 
 const NotFound = () => {
   return (
     <>
+     <Helmet>
+        <title> 404 | Error </title>
+        <meta name="description" content="Oops! Page not found.
+" />
+      </Helmet>
+
     {/* <Navbar/> */}
     <div className="min-h-screen flex flex-col justify-center items-center bg-gray-50 text-center px-4">
       <h1 className="text-6xl font-bold text-blue-600 mb-4">404</h1>

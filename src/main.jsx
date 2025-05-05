@@ -3,17 +3,17 @@ import { ToastContainer } from "react-toastify";
 import React from "react";
 import ReactDOM from "react-dom/client";
 import { createBrowserRouter, RouterProvider } from "react-router-dom";
+import { HelmetProvider } from 'react-helmet-async';
 
 
 
 import App from "./App";
 
-// Pages
+
 import Home from "./pages/Home";
-// import DoctorDetails from "./pages/DoctorDetails"; 
-// import Bookings from "./pages/Bookings";
+
 import NotFound from "./pages/NotFound";
-// import Blogs from "./pages/Blogs";
+
 
 
 const router = createBrowserRouter([
@@ -22,9 +22,7 @@ const router = createBrowserRouter([
     element: <App />, 
     children: [
       { index: true, element: <Home /> },
-      // { path: "doctors/:id", element: <DoctorDetails /> }, 
-      // { path: "bookings", element: <Bookings /> },
-      // { path: "blogs", element: <Blogs /> },
+    
     ],
   },
   {
@@ -36,8 +34,12 @@ const router = createBrowserRouter([
 
 ReactDOM.createRoot(document.getElementById("root")).render(
   <React.StrictMode>
+  <HelmetProvider>
+    < >
     <RouterProvider router={router} />
     <ToastContainer />
-    
+    </>
+    </HelmetProvider>
+   
   </React.StrictMode>
 );
