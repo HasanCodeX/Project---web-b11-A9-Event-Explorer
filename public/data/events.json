@@ -1,0 +1,57 @@
+[
+  {
+    "id": 1,
+    "thumbnail": "https://i.ibb.co.com/N26HnVz1/image8.jpg",
+    "name": "Tech Conference 2025",
+    "category": "Tech",
+    "date": "June 15, 2025",
+    "location": "San Francisco, CA",
+    "entryFee": "$50"
+  },
+  {
+    "id": 2,
+    "thumbnail": "https://i.ibb.co.com/RTkLB4vg/image7.jpg",
+    "name": "Art Exhibition - Modern Art",
+    "category": "Art",
+    "date": "July 22, 2025",
+    "location": "Los Angeles, CA",
+    "entryFee": "$30"
+  },
+  {
+    "id": 3,
+    "thumbnail": "https://i.ibb.co.com/G4cvdmXK/image6.jpg",
+    "name": "Film Maker Meetup",
+    "category": "Sports",
+    "date": "August 10, 2025",
+    "location": "New York, NY",
+    "entryFee": "Free"
+  },
+  {
+    "id": 4,
+    "thumbnail": "https://i.ibb.co.com/nqDYhzLP/image5.jpg",
+    
+    "name": "Photography Exhibition - The Art of Nature",
+    "category": "Tech",
+    "date": "September 5, 2025",
+    "location": "Boston, MA",
+    "entryFee": "$150"
+  },
+  {
+    "id": 5,
+    "thumbnail": "https://i.ibb.co.com/fdNGBFRX/image4.jpg",
+    "name": "Business Conference 2025",
+    "category": "Art",
+    "date": "October 12, 2025",
+    "location": "Miami, FL",
+    "entryFee": "$20"
+  },
+  {
+    "id": 6,
+    "thumbnail": "https://i.ibb.co.com/m5DcVypV/image3.jpg",
+    "name": "AI & Machine Learning Workshop 2025",
+    "category": "Sports",
+    "date": "November 7, 2025",
+    "location": "Chicago, IL",
+    "entryFee": "$75"
+  }
+]
