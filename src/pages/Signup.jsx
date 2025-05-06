@@ -51,7 +51,7 @@ const Signup = () => {
   };
 
   return (
-    <div className=" p-16 flex justify-center items-center min-h-screen bg-gradient-to-tr from-green-100 to-blue-200">
+    <div className=" p-8 flex justify-center items-center min-h-screen bg-gradient-to-tr from-green-100 to-blue-200">
       <Helmet>
         <title>Sign Up | Event Explorer</title>
       </Helmet>
