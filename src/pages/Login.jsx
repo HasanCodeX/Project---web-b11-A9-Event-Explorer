@@ -1,8 +1,14 @@
 import { useState } from "react";
-import { useNavigate, useLocation } from "react-router-dom";
-import { signInWithEmailAndPassword, GoogleAuthProvider, signInWithPopup } from "firebase/auth";
+import { useNavigate } from "react-router-dom";
+import {
+  signInWithEmailAndPassword,
+  GoogleAuthProvider,
+  signInWithPopup,
+  sendPasswordResetEmail,
+} from "firebase/auth";
 import { auth } from "../Context/firebase/firebase.config";
 import { Helmet } from "react-helmet-async";
+import { toast } from "react-toastify";
 
 const provider = new GoogleAuthProvider();
 
@@ -16,12 +22,15 @@ const Login = () => {
     e.preventDefault();
     const passwordRegex = /^(?=.*[a-z])(?=.*[A-Z]).{6,}$/;
     if (!passwordRegex.test(password)) {
-      setError("Password must contain at least one uppercase, one lowercase, and be at least 6 characters.");
+      setError(
+        "Password must contain at least one uppercase, one lowercase, and be at least 6 characters."
+      );
       return;
     }
 
     try {
       await signInWithEmailAndPassword(auth, email, password);
+      toast.success("Login successful!");
       navigate("/");
     } catch (err) {
       setError(err.message);
@@ -31,14 +40,26 @@ const Login = () => {
   const handleGoogleLogin = async () => {
     try {
       await signInWithPopup(auth, provider);
+      toast.success("Logged in with Google!");
       navigate("/");
     } catch (err) {
       setError(err.message);
     }
   };
 
-  const handleForgotPassword = () => {
-    navigate("/forgot-password", { state: { email } });
+  const resetPassword = () => {
+    if (!email) {
+      toast.error("Please enter your email first.");
+      return;
+    }
+
+    sendPasswordResetEmail(auth, email)
+      .then(() => {
+        toast.success("Password reset email sent!");
+      })
+      .catch((err) => {
+        toast.error(err.message);
+      });
   };
 
   return (
@@ -71,13 +92,15 @@ const Login = () => {
         <div className="text-right">
           <button
             type="button"
-            onClick={handleForgotPassword}
+            onClick={resetPassword}
             className="text-sm text-blue-600 hover:underline"
           >
             Forgot Password?
           </button>
         </div>
-        <button type="submit" className="btn btn-primary w-full">Login</button>
+        <button type="submit" className="btn btn-primary w-full">
+          Login
+        </button>
         <div className="divider">OR</div>
         <button
           type="button"
