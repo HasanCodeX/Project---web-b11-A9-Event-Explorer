@@ -14,7 +14,7 @@ export default function HeroSlider() {
       subtitle: 'Stay ahead with the latest in innovation',
     },
     {
-      img: 'https://i.ibb.co.com/PZ8CJ3vr/meet.jpg',
+      img: 'https://i.ibb.co.com/N26HnVz1/image8.jpg',
       title: 'Connect & Collaborate',
       subtitle: 'Join exciting local meetups around you',
     },
