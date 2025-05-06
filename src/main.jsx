@@ -5,7 +5,9 @@ import ReactDOM from "react-dom/client";
 import { createBrowserRouter, RouterProvider } from "react-router-dom";
 import { HelmetProvider } from 'react-helmet-async';
 
+import Login from "./pages/Login";
 
+import Signup from "./pages/Signup";
 
 import App from "./App";
 
@@ -28,7 +30,16 @@ const router = createBrowserRouter([
   {
     path:'/*',
     element:<NotFound/>
+  },
+  {
+    path: "/login",
+    element: <Login />
+  },
+  {
+    path: "/signup",
+    element: <Signup />
   }
+  
 ]);
 
 

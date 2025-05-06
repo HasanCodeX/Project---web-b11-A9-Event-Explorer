@@ -5,6 +5,7 @@ import { signOut } from "firebase/auth";
 import { auth } from "../firebase/firebase.config";
 import logo from "../assets/logo.png";
 
+
 const Navbar = () => {
   const [user] = useAuthState(auth);
 
