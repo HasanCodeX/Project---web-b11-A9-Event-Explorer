@@ -30,7 +30,7 @@ function App() {
         <Outlet />
       )}
       {/* Toast notifications */}
-      <ToastContainer position="top-center" autoClose={3000} />
+      <ToastContainer position="top-center" autoClose={1500} />
       <Footer />
     </>
   );
