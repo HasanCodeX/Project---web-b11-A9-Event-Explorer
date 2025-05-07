@@ -14,6 +14,7 @@ import {
 export const AuthContext = createContext();
 
 const auth = getAuth(app);
+
 const AuthProvider = ({ children }) => {
   const [user, setUser] = useState(null);
   const [loading, setLoading] = useState(true);
@@ -66,6 +67,11 @@ const AuthProvider = ({ children }) => {
       {children}
     </AuthContext.Provider>
   );
+};
+
+// Exporting the useAuth hook to be used in other components
+export const useAuth = () => {
+  return React.useContext(AuthContext);
 };
 
 export default AuthProvider;

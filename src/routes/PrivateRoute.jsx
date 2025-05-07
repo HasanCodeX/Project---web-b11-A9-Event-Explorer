@@ -1,35 +1,15 @@
-import { Routes, Route } from "react-router-dom";
-import PrivateRoute from "..//routes/PrivateRoute";
-import Home from "../pages/Home";
-import Login from "../pages/Login";
-import Profile from "../pages/Profile";
-import About from "../pages/About";
+import React from "react";
+import { Navigate } from "react-router-dom";
+import { useAuth } from "../Context/Provider/AuthProvider"; // Assuming useAuth provides current user status
 
-function App() {
-  return (
-    <Routes>
-      <Route path="/" element={<Home />} />
-      <Route path="/login" element={<Login />} />
+const PrivateRoute = ({ children }) => {
+  const { user } = useAuth(); // Assume `user` is available if logged in
 
-      {/* Protected Routes */}
-      <Route
-        path="/profile"
-        element={
-          <PrivateRoute>
-            <Profile />
-          </PrivateRoute>
-        }
-      />
-      <Route
-        path="/about"
-        element={
-          <PrivateRoute>
-            <About />
-          </PrivateRoute>
-        }
-      />
-    </Routes>
-  );
-}
+  if (!user) {
+    return <Navigate to="/login" replace />;
+  }
 
-export default App;
+  return children;
+};
+
+export default PrivateRoute;

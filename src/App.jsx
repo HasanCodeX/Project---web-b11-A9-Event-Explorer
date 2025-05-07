@@ -1,37 +1,39 @@
 import { Outlet, useLocation } from "react-router-dom";
-import Navbar from './Components/Navbar'
-import './App.css'
+import Navbar from './Components/Navbar';
+import './App.css';
 import Footer from './Components/Footer';
-
 import "react-toastify/dist/ReactToastify.css";
-// import { ToastContainer } from "react-toastify";
+import { ToastContainer } from "react-toastify";
 import { useEffect, useState } from "react";
 import Loading from "./Components/Loading";
-
-
-
+import PrivateRoute from "./routes/PrivateRoute";  // import PrivateRoute
 
 function App() {
-  const [loading,setLoading]=useState(false)
- const location=useLocation()
- useEffect(()=>{
-  setLoading(true)
-  const timeout=setTimeout(() => {
-    setLoading(false)
-  }, 1000);
-  return ()=>clearTimeout(timeout)
- },[location])
+  const [loading, setLoading] = useState(false);
+  const location = useLocation();
+
+  useEffect(() => {
+    setLoading(true);
+    const timeout = setTimeout(() => {
+      setLoading(false);
+    }, 1000);
+    return () => clearTimeout(timeout);
+  }, [location]);
 
   return (
     <>
       <Navbar />
-      {loading?<Loading/>:<Outlet/>
-      }
-      {/* <ToastContainer />
-      */}
+      {loading ? (
+        <Loading />
+      ) : (
+        // Wrap the Outlet component with PrivateRoute for protected routes
+        <Outlet />
+      )}
+      {/* Toast notifications */}
+      <ToastContainer position="top-center" autoClose={3000} />
       <Footer />
     </>
-  )
+  );
 }
 
-export default App
+export default App;
