@@ -46,9 +46,12 @@ const WhyChooseUs = () => {
               key={index}
               className="bg-white p-6 rounded-2xl shadow-md hover:shadow-lg transition duration-300"
             >
-              <div className="text-4xl sm:text-5xl text-blue-600 mb-4">
-                {benefit.icon}
-              </div>
+             
+
+             <div className="flex items-center justify-center text-4xl sm:text-5xl text-blue-600 mb-4">
+  {benefit.icon}
+</div>
+
               <h3 className="text-lg sm:text-xl font-semibold text-gray-800 mb-2">
                 {benefit.title}
               </h3>
