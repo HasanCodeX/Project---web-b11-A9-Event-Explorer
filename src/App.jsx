@@ -4,7 +4,7 @@ import './App.css'
 import Footer from './Components/Footer';
 
 import "react-toastify/dist/ReactToastify.css";
-import { ToastContainer } from "react-toastify";
+// import { ToastContainer } from "react-toastify";
 import { useEffect, useState } from "react";
 import Loading from "./Components/Loading";
 
@@ -27,8 +27,8 @@ function App() {
       <Navbar />
       {loading?<Loading/>:<Outlet/>
       }
-      <ToastContainer />
-     
+      {/* <ToastContainer />
+      */}
       <Footer />
     </>
   )

@@ -6,7 +6,8 @@
     "category": "Tech",
     "date": "June 15, 2025",
     "location": "San Francisco, CA",
-    "entryFee": "$50"
+    "entryFee": "$50",
+    "description": "Join industry leaders and tech enthusiasts for a cutting-edge conference featuring the latest trends in AI, blockchain, and robotics. Don't miss out on the most anticipated tech event of the year!"
   },
   {
     "id": 2,
@@ -15,7 +16,8 @@
     "category": "Art",
     "date": "July 22, 2025",
     "location": "Los Angeles, CA",
-    "entryFee": "$30"
+    "entryFee": "$30",
+    "description": "Experience a stunning collection of contemporary works by emerging artists. This exhibition explores the themes of identity, technology, and social change."
   },
   {
     "id": 3,
@@ -24,17 +26,18 @@
     "category": "Sports",
     "date": "August 10, 2025",
     "location": "New York, NY",
-    "entryFee": "Free"
+    "entryFee": "Free",
+    "description": "A networking event for aspiring filmmakers, producers, and directors. Learn about the latest trends in filmmaking and sports media, and get hands-on experience with industry tools."
   },
   {
     "id": 4,
     "thumbnail": "https://i.ibb.co.com/nqDYhzLP/image5.jpg",
-    
     "name": "Photography Exhibition - The Art of Nature",
     "category": "Tech",
     "date": "September 5, 2025",
     "location": "Boston, MA",
-    "entryFee": "$150"
+    "entryFee": "$150",
+    "description": "A breathtaking exhibition showcasing the beauty of nature captured through the lens of professional photographers. The exhibit includes both traditional and digital photography techniques."
   },
   {
     "id": 5,
@@ -43,7 +46,8 @@
     "category": "Art",
     "date": "October 12, 2025",
     "location": "Miami, FL",
-    "entryFee": "$20"
+    "entryFee": "$20",
+    "description": "This year's business conference will feature keynote speakers from top global companies, covering topics such as entrepreneurship, digital marketing, and sustainable business practices."
   },
   {
     "id": 6,
@@ -52,6 +56,7 @@
     "category": "Sports",
     "date": "November 7, 2025",
     "location": "Chicago, IL",
-    "entryFee": "$75"
+    "entryFee": "$75",
+    "description": "This hands-on workshop will dive deep into AI and machine learning techniques. Learn how to build and train models, explore data sets, and apply these technologies in real-world scenarios."
   }
 ]

@@ -63,7 +63,7 @@ const Login = () => {
   };
 
   return (
-    <div className="flex justify-center items-center min-h-screen bg-gradient-to-tr from-blue-100 to-purple-200">
+    <div className="p-8 flex justify-center items-center min-h-screen bg-gradient-to-tr from-blue-100 to-purple-200">
       <Helmet>
         <title>Login | Event Explorer</title>
       </Helmet>
@@ -109,6 +109,11 @@ const Login = () => {
         >
           Continue with Google
         </button>
+        <p className="text-sm text-center">
+  Don't have an account?{" "}
+  <a href="/signup" className="text-blue-600 hover:underline">Sign up</a>
+</p>
+
       </form>
     </div>
   );
