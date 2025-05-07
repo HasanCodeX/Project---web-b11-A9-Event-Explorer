@@ -30,30 +30,19 @@ const Footer = () => {
             <NavLink to="/" className={navLinkStyle}>
               Home
             </NavLink>
-            <NavLink to="/bookings" className={navLinkStyle}>
-              My Profile
-            </NavLink>
-            <a
-              href="#terms"
-              className="text-gray-600 hover:text-primary transition duration-200"
-            >
-              Terms
-            </a>
-            <a
-              href="#privacy"
-              className="text-gray-600 hover:text-primary transition duration-200"
-            >
-              Privacy
-            </a>
+            
+            <NavLink to="/profile" className={navLinkStyle}>My Profile</NavLink>
+            <NavLink to="/about" className={navLinkStyle}>About</NavLink>
+            
           </div>
         </div>
 
-        {/* Divider */}
+       
         <hr className="my-8 border-gray-300" />
 
-        {/* Static Content: Terms & Conditions and Privacy Policy */}
+       
         <div className="md:flex justify-between">
-          {/* Terms and Conditions */}
+         
           <div className="md:w-5/12 text-sm text-gray-600 mb-6 md:mb-0" id="terms">
             <h2 className="text-xl font-semibold text-gray-800 mb-3">Terms</h2>
             <p>
@@ -61,7 +50,7 @@ const Footer = () => {
             </p>
           </div>
 
-          {/* Privacy Policy */}
+       
           <div className="md:w-5/12 text-sm text-gray-600" id="privacy">
             <h2 className="text-xl font-semibold text-gray-800 mb-3">Privacy</h2>
             <p>
@@ -70,9 +59,9 @@ const Footer = () => {
           </div>
         </div>
 
-        {/* Bottom: Social + Copyright */}
+       
         <div className="flex flex-col md:flex-row justify-between items-center gap-6 mt-12">
-          {/* Social Media Links */}
+         
           <div className="flex gap-6 text-xl text-gray-600 mb-6 md:mb-0">
             <a href="https://facebook.com" target="_blank" rel="noreferrer">
               <FaFacebookF className="hover:text-blue-600 transition duration-200" />
@@ -88,7 +77,7 @@ const Footer = () => {
             </a>
           </div>
 
-          {/* Copyright */}
+          
           <p className="text-sm text-gray-500 text-center md:text-right">
             &copy; {new Date().getFullYear()} Event Explorer. All rights reserved.
           </p>
