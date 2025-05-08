@@ -9,12 +9,14 @@ import {
 import { auth } from "../Context/firebase/firebase.config";
 import { Helmet } from "react-helmet-async";
 import { toast } from "react-toastify";
+import { FaEye, FaEyeSlash } from "react-icons/fa"; // Import icons for toggle
 
 const provider = new GoogleAuthProvider();
 
 const Login = () => {
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
+  const [showPassword, setShowPassword] = useState(false); // State for password visibility toggle
   const [error, setError] = useState(null);
   const navigate = useNavigate();
 
@@ -73,6 +75,7 @@ const Login = () => {
       >
         <h2 className="text-2xl font-bold text-center text-primary">Login</h2>
         {error && <p className="text-red-500 text-sm">{error}</p>}
+        
         <input
           type="email"
           placeholder="Email"
@@ -81,14 +84,25 @@ const Login = () => {
           onChange={(e) => setEmail(e.target.value)}
           required
         />
-        <input
-          type="password"
-          placeholder="Password"
-          className="input input-bordered w-full"
-          value={password}
-          onChange={(e) => setPassword(e.target.value)}
-          required
-        />
+        
+        {/* Password input toggle */}
+        <div className="relative">
+          <input
+            type={showPassword ? "text" : "password"}  // Toggle password
+            placeholder="Password"
+            className="input input-bordered w-full pr-10" 
+            value={password}
+            onChange={(e) => setPassword(e.target.value)}
+            required
+          />
+          <span
+            onClick={() => setShowPassword(!showPassword)}  // Toggle showPassword 
+            className="absolute right-3 top-1/2 transform -translate-y-1/2 cursor-pointer text-gray-500"
+          >
+            {showPassword ? <FaEyeSlash /> : <FaEye />} 
+          </span>
+        </div>
+        
         <div className="text-right">
           <button
             type="button"
@@ -98,6 +112,7 @@ const Login = () => {
             Forgot Password?
           </button>
         </div>
+        
         <button type="submit" className="btn btn-primary w-full">
           Login
         </button>
@@ -110,10 +125,9 @@ const Login = () => {
           Continue with Google
         </button>
         <p className="text-sm text-center">
-  Don't have an account?{" "}
-  <a href="/signup" className="text-blue-600 hover:underline">Sign up</a>
-</p>
-
+          Don't have an account?{" "}
+          <a href="/signup" className="text-blue-600 hover:underline">Sign up</a>
+        </p>
       </form>
     </div>
   );
