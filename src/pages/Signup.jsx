@@ -8,6 +8,7 @@ import {
 } from "firebase/auth";
 import { auth } from "../Context/firebase/firebase.config";
 import { Helmet } from "react-helmet-async";
+import { FaEye, FaEyeSlash } from "react-icons/fa";  
 
 const provider = new GoogleAuthProvider();
 
@@ -16,6 +17,7 @@ const Signup = () => {
   const [photoURL, setPhotoURL] = useState("");
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
+  const [showPassword, setShowPassword] = useState(false);  
   const [error, setError] = useState(null);
   const navigate = useNavigate();
 
@@ -51,7 +53,7 @@ const Signup = () => {
   };
 
   return (
-    <div className=" p-8 flex justify-center items-center min-h-screen bg-gradient-to-tr from-green-100 to-blue-200">
+    <div className="p-8 flex justify-center items-center min-h-screen bg-gradient-to-tr from-green-100 to-blue-200">
       <Helmet>
         <title>Sign Up | Event Explorer</title>
       </Helmet>
@@ -61,6 +63,7 @@ const Signup = () => {
       >
         <h2 className="text-2xl font-bold text-center text-primary">Sign Up</h2>
         {error && <p className="text-red-500 text-sm">{error}</p>}
+        
         <input
           type="text"
           placeholder="Full Name"
@@ -84,14 +87,25 @@ const Signup = () => {
           onChange={(e) => setEmail(e.target.value)}
           required
         />
-        <input
-          type="password"
-          placeholder="Password"
-          className="input input-bordered w-full"
-          value={password}
-          onChange={(e) => setPassword(e.target.value)}
-          required
-        />
+
+        {/* Password input  toggle */}
+        <div className="relative">
+          <input
+            type={showPassword ? "text" : "password"}  // Toggle password type
+            placeholder="Password"
+            className="input input-bordered w-full pr-10"  
+            value={password}
+            onChange={(e) => setPassword(e.target.value)}
+            required
+          />
+          <span
+            onClick={() => setShowPassword(!showPassword)}  // Toggle showPassword 
+            className="absolute right-3 top-1/2 transform -translate-y-1/2 cursor-pointer text-gray-500"
+          >
+            {showPassword ? <FaEyeSlash /> : <FaEye />}  {/* Toggle icon */}
+          </span>
+        </div>
+
         <button type="submit" className="btn btn-primary w-full">
           Sign Up
         </button>
