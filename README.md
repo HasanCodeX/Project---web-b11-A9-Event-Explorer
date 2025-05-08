@@ -1,15 +1,47 @@
-# React + Vite
+# Event Explorer 🎉
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+A modern web application to discover local events, built with **React**, **Firebase**, **TailwindCSS**, and **Vite**. Users can explore events, view details, book seats, and manage their profiles with secure authentication.
 
-Currently, two official plugins are available:
+🌐 **Live Demo**: [https://event-explorer-bd.netlify.app](https://event-explorer-bd.netlify.app)
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+---
 
-## Expanding the ESLint configuration
+## 🚀 Features
 
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
-# Project---web-b11-A8-Phudu-Medical-Apoinment-App
-# a8-a9-merge
-# HasanCodeX-Project---web-b11-A9-Event-Explorer
+- 🔐 Firebase Authentication (Email/Password, Google)
+- 📋 Event listing with detailed views
+- 🧾 Booking/reservation system
+- 👤 Protected user profile with edit functionality
+- 🌐 Responsive UI with TailwindCSS & DaisyUI
+- 🔁 Client-side routing with React Router v7
+- 🎨 Icons, charts, and animated counters
+- 🍞 Toast notifications for user feedback
+
+---
+
+## 🛠️ Tech Stack
+
+| Tool | Purpose |
+|------|---------|
+| **React** | UI library |
+| **Vite** | Build tool |
+| **Firebase** | Auth & backend services |
+| **Tailwind CSS** | Utility-first CSS |
+| **DaisyUI** | Tailwind component library |
+| **React Router DOM** | Client-side routing |
+| **React Toastify** | Toast notifications |
+| **React Helmet Async** | SEO meta tag management |
+| **Recharts** | Chart visualizations |
+| **Swiper.js** | Image sliders |
+| **React Icons** | Icon library |
+| **React Firebase Hooks** | Firebase hooks for authentication |
+| **React CountUp** | Animated counters |
+
+---
+
+## 📦 Installation
+
+```bash
+git clone https://github.com/HasanCodeX/HasanCodeX-Project---web-b11-A9-Event-Explorer.git
+cd event-explorer-app
+npm install

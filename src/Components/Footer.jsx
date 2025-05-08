@@ -50,6 +50,8 @@ const Footer = () => {
             </p>
           </div>
 
+
+
        
           <div className="md:w-5/12 text-sm text-gray-600" id="privacy">
             <h2 className="text-xl font-semibold text-gray-800 mb-3">Privacy</h2>
