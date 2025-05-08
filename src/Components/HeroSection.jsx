@@ -48,10 +48,10 @@ export default function HeroSlider() {
                 alt={`Slide ${index + 1}`}
                 className="w-full h-full object-cover"
               />
-              {/* Overlay for contrast */}
+             
               <div className="absolute inset-0 bg-gradient-to-r from-black/70 to-black/20"></div>
 
-              {/* Text Content */}
+             
              
               <div className="absolute inset-0 flex flex-col justify-center items-center px-4 space-y-4 text-center">
   <h2 className="text-white text-3xl md:text-5xl font-extrabold drop-shadow-md">

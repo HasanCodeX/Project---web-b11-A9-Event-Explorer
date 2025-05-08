@@ -1,4 +1,4 @@
-// WhyChooseUs.jsx
+
 import React from "react";
 import {
   FaCheckCircle,

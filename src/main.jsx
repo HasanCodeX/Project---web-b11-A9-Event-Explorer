@@ -11,10 +11,10 @@ import Login from "./pages/Login";
 import Signup from "./pages/Signup";
 import Home from "./pages/Home";
 import NotFound from "./pages/NotFound";
-import EventDetails from "./pages/EventDetails"; // ✅ import this
-import AuthProvider from "./Context/Provider/AuthProvider"; // AuthProvider for managing user state
-import PrivateRoute from "./routes/PrivateRoute"; // ✅ import PrivateRoute
-import Profile from "./pages/Profile"; // ✅ import Profile page
+import EventDetails from "./pages/EventDetails";
+import AuthProvider from "./Context/Provider/AuthProvider"; 
+import PrivateRoute from "./routes/PrivateRoute"; 
+import Profile from "./pages/Profile";
 import About from "./pages/About";
 
 const router = createBrowserRouter([
@@ -25,7 +25,7 @@ const router = createBrowserRouter([
       { index: true, element: <Home /> },
       { path: "login", element: <Login /> },
       { path: "signup", element: <Signup /> },
-      // Protected routes (wrapped with PrivateRoute)
+      
       {
         path: "profile",
         element: (

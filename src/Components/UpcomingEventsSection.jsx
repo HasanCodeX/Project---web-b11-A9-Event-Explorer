@@ -1,6 +1,6 @@
 import React, { useEffect, useState } from "react";
-import EventCard from "./EventCard"; // Ensure you create an EventCard component for each event
-import Loading from "./Loading"; // Assuming this is the loading component you're using
+import EventCard from "./EventCard"; 
+import Loading from "./Loading";
 
 const UpcomingEventsSection = () => {
   const [visibleEvents, setVisibleEvents] = useState([]);
@@ -9,12 +9,12 @@ const UpcomingEventsSection = () => {
   const [showAll, setShowAll] = useState(false);
 
   useEffect(() => {
-    // Fetch events data
-    fetch("/data/events.json") // This path should have your events JSON data
+    
+    fetch("/data/events.json") 
       .then((res) => res.json())
       .then((data) => {
         setAllEvents(data);
-        setVisibleEvents(data.slice(0, 3)); // Show only 6 events initially
+        setVisibleEvents(data.slice(0, 3)); 
         setLoading(false);
       })
       .catch((err) => {
@@ -29,7 +29,7 @@ const UpcomingEventsSection = () => {
       setVisibleEvents(allEvents);
       setLoading(false);
       setShowAll(true);
-    }, 1000); // simulate loading delay
+    }, 1000); 
   };
 
   return (

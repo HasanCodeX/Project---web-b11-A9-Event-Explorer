@@ -1,4 +1,4 @@
-// src/Components/Navbar.jsx
+
 import { Link, NavLink } from "react-router-dom";
 import { useAuthState } from "react-firebase-hooks/auth";
 import { signOut } from "firebase/auth";
@@ -19,7 +19,7 @@ const Navbar = () => {
     <div className="bg-base-200 shadow-sm sticky top-0 z-50">
       <div className="navbar max-w-7xl mx-auto px-4 lg:px-6 justify-between">
         
-        {/* Logo */}
+     
         <div className="flex items-center gap-2">
           <Link to="/" className="flex items-center gap-2 text-xl font-bold">
             <img src={logo} alt="logo" className="w-9 h-9 rounded-full" />
@@ -27,14 +27,14 @@ const Navbar = () => {
           </Link>
         </div>
 
-        {/* Nav Links */}
+     
         <div className="hidden lg:flex gap-x-6 items-center">
           <NavLink to="/" className={navLinkStyle}>Home</NavLink>
           <NavLink to="/profile" className={navLinkStyle}>My Profile</NavLink>
           <NavLink to="/about" className={navLinkStyle}>About</NavLink>
         </div>
 
-        {/* Right Auth Section */}
+        
         <div className="hidden lg:flex items-center gap-4">
           {user ? (
             <div className="dropdown dropdown-end">

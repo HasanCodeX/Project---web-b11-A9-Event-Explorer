@@ -22,7 +22,7 @@ const Signup = () => {
   const handleSignup = async (e) => {
     e.preventDefault();
 
-    // Password validation
+    // Password validation 
     const passwordRegex = /^(?=.*[a-z])(?=.*[A-Z]).{6,}$/;
     if (!passwordRegex.test(password)) {
       setError("Password must have at least one uppercase, one lowercase, and 6+ characters.");

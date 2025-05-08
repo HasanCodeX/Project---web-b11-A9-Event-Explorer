@@ -1,4 +1,4 @@
-// src/pages/Profile.jsx
+
 import { useAuthState } from "react-firebase-hooks/auth";
 import { auth } from "../Context/firebase/firebase.config";
 import { Navigate } from "react-router-dom";

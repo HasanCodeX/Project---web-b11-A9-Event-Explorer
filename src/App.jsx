@@ -6,7 +6,7 @@ import "react-toastify/dist/ReactToastify.css";
 import { ToastContainer } from "react-toastify";
 import { useEffect, useState } from "react";
 import Loading from "./Components/Loading";
-import PrivateRoute from "./routes/PrivateRoute";  // import PrivateRoute
+
 
 function App() {
   const [loading, setLoading] = useState(false);
@@ -26,10 +26,10 @@ function App() {
       {loading ? (
         <Loading />
       ) : (
-        // Wrap the Outlet component with PrivateRoute for protected routes
+       
         <Outlet />
       )}
-      {/* Toast notifications */}
+     
       <ToastContainer position="top-center" autoClose={1500} />
       <Footer />
     </>
