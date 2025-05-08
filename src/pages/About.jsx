@@ -1,7 +1,13 @@
 
+import { Helmet } from "react-helmet-async";
+
+
 const About = () => {
     return (
       <div className="max-w-3xl mx-auto px-4 py-10">
+         <Helmet>
+        <title>About| Event Explorer</title>
+      </Helmet>
         <h1 className="text-3xl font-bold mb-4 text-primary">About Event Explorer</h1>
         <p className="mb-4">
           Welcome to <strong>Event Explorer</strong> – your destination to discover exciting local events and reserve your spot with ease.

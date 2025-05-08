@@ -1,6 +1,7 @@
 import React, { useState, useEffect } from "react";
 import { useLocation } from "react-router-dom";
 import { toast } from "react-toastify";
+import { Helmet } from "react-helmet-async";
 
 const EventDetails = () => {
   const location = useLocation();
@@ -45,6 +46,9 @@ const EventDetails = () => {
 
   return (
     <div className="max-w-4xl mx-auto px-4 py-8">
+       <Helmet>
+        <title>Details | Event Explorer</title>
+      </Helmet>
       <h1 className="text-3xl font-bold mb-4">{event.name}</h1>
       <img
         src={event.thumbnail}

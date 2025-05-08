@@ -9,7 +9,7 @@ import {
 import { auth } from "../Context/firebase/firebase.config";
 import { Helmet } from "react-helmet-async";
 import { toast } from "react-toastify";
-import { FaEye, FaEyeSlash } from "react-icons/fa"; // Import icons for toggle
+import { FaEye, FaEyeSlash } from "react-icons/fa"; 
 
 const provider = new GoogleAuthProvider();
 

@@ -8,7 +8,7 @@ const Home = () => {
   return (
     <>
       <Helmet>
-        <title>Event Explorer | Home </title>
+        <title> Home |  Event Explorer</title>
         <meta name="description" content="Discover local events near you with Event Explorer." />
       </Helmet>
 

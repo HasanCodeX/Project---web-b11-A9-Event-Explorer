@@ -1,6 +1,6 @@
-// src/main.jsx
+
 import "react-toastify/dist/ReactToastify.css";
-import { ToastContainer } from "react-toastify";
+// import { ToastContainer } from "react-toastify";
 import React from "react";
 import ReactDOM from "react-dom/client";
 import { createBrowserRouter, RouterProvider } from "react-router-dom";
@@ -63,7 +63,7 @@ ReactDOM.createRoot(document.getElementById("root")).render(
     <HelmetProvider>
       <AuthProvider>
         <RouterProvider router={router} />
-        <ToastContainer position="top-center" autoClose={3000} />
+        {/* <ToastContainer position="top-center" autoClose={1500} /> */}
       </AuthProvider>
     </HelmetProvider>
   </React.StrictMode>

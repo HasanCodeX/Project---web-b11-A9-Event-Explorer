@@ -8,7 +8,8 @@ import {
 } from "firebase/auth";
 import { auth } from "../Context/firebase/firebase.config";
 import { Helmet } from "react-helmet-async";
-import { FaEye, FaEyeSlash } from "react-icons/fa";  
+import { toast } from "react-toastify";
+import { FaEye, FaEyeSlash } from "react-icons/fa";
 
 const provider = new GoogleAuthProvider();
 
@@ -17,17 +18,18 @@ const Signup = () => {
   const [photoURL, setPhotoURL] = useState("");
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
-  const [showPassword, setShowPassword] = useState(false);  
+  const [showPassword, setShowPassword] = useState(false);
   const [error, setError] = useState(null);
   const navigate = useNavigate();
 
   const handleSignup = async (e) => {
     e.preventDefault();
 
-    // Password validation
     const passwordRegex = /^(?=.*[a-z])(?=.*[A-Z]).{6,}$/;
     if (!passwordRegex.test(password)) {
-      setError("Password must have at least one uppercase, one lowercase, and 6+ characters.");
+      const msg = "Password must have at least one uppercase, one lowercase, and 6+ characters.";
+      setError(msg);
+      toast.error(msg);
       return;
     }
 
@@ -37,18 +39,22 @@ const Signup = () => {
         displayName: name,
         photoURL: photoURL,
       });
+      toast.success("Signup successful!");
       navigate("/");
     } catch (err) {
       setError(err.message);
+      toast.error(err.message);
     }
   };
 
   const handleGoogleSignup = async () => {
     try {
       await signInWithPopup(auth, provider);
+      toast.success("Signed up with Google!");
       navigate("/");
     } catch (err) {
       setError(err.message);
+      toast.error(err.message);
     }
   };
 
@@ -63,7 +69,7 @@ const Signup = () => {
       >
         <h2 className="text-2xl font-bold text-center text-primary">Sign Up</h2>
         {error && <p className="text-red-500 text-sm">{error}</p>}
-        
+
         <input
           type="text"
           placeholder="Full Name"
@@ -88,21 +94,20 @@ const Signup = () => {
           required
         />
 
-        {/* Password input  toggle */}
         <div className="relative">
           <input
-            type={showPassword ? "text" : "password"}  // Toggle password type
+            type={showPassword ? "text" : "password"}
             placeholder="Password"
-            className="input input-bordered w-full pr-10"  
+            className="input input-bordered w-full pr-10"
             value={password}
             onChange={(e) => setPassword(e.target.value)}
             required
           />
           <span
-            onClick={() => setShowPassword(!showPassword)}  // Toggle showPassword 
+            onClick={() => setShowPassword(!showPassword)}
             className="absolute right-3 top-1/2 transform -translate-y-1/2 cursor-pointer text-gray-500"
           >
-            {showPassword ? <FaEyeSlash /> : <FaEye />}  {/* Toggle icon */}
+            {showPassword ? <FaEyeSlash /> : <FaEye />}
           </span>
         </div>
 
