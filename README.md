@@ -111,7 +111,7 @@ Open a Pull Request
 This project is currently unlicensed. For usage rights, please contact the author.
 
 📬 Contact
-Maintainer: HasanCodeX
+Maintainer: https://github.com/HasanCodeX
 💡 Issues? Open a GitHub issue or reach out!
 
 Why Choose Event Explorer?
